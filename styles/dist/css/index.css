@@ -1,0 +1,80 @@
+/* mixin */
+body {
+  margin: auto;
+  padding: auto;
+  background-color: hsl(216deg, 12%, 8%);
+}
+
+#main-container {
+  padding: 2em;
+  margin: 25%;
+  background-color: hsl(213deg, 19%, 18%);
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+#buttons-container {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1em;
+}
+#buttons-container .button {
+  border-radius: 50%;
+  padding: 0.75em 1em;
+  background-color: hsl(216deg, 12%, 54%);
+}
+#buttons-container .button:hover {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+}
+
+#submit {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.5em;
+  border-radius: 20px;
+}
+#submit:hover {
+  cursor: pointer;
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+#thankyou-container {
+  padding: 2em;
+  margin: 25%;
+  background-color: hsl(213deg, 19%, 18%);
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#thankyou-container svg {
+  display: block;
+  margin: 0 auto 2rem;
+  margin-bottom: -0.1em;
+}
+#thankyou-container #rating {
+  color: hsl(25deg, 97%, 53%);
+  border-radius: 20px;
+  background-color: hsl(213deg, 20%, 22%);
+  padding: 0.2rem 0.5rem 0;
+}
+#thankyou-container h1 {
+  margin-bottom: -0.1em;
+}
+#thankyou-container #thankyou-para {
+  color: hsl(217deg, 12%, 63%);
+}
+
+.hidden {
+  display: none !important;
+}/*# sourceMappingURL=index.css.map */

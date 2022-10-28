@@ -1,0 +1,118 @@
+@use "variables" as *; 
+ 
+
+/* mixin */ 
+
+@mixin containers{
+    padding: 2em;
+    margin: 25%;
+    background-color: $DarkBlue;
+    color: $White;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: $roundradius;
+
+}
+
+
+body { 
+   margin: auto;
+   padding: auto;
+   background-color: $VeryDarkBlue;
+   
+}
+
+#main-container { 
+ @include containers();
+
+ 
+}
+
+#buttons-container { 
+display: flex;
+justify-content: space-around; 
+padding-bottom: 1em;
+
+    .button { 
+        border-radius: 50%;
+        padding: .75em 1em;
+        background-color: $MediumGrey;
+    
+
+
+        &:hover { 
+            background-color: $Orange;
+            color: $White;
+            cursor: pointer;
+        }
+
+
+    }
+
+
+}
+
+
+#submit { 
+   
+    background-color: $Orange;
+    color: $White;
+    padding: .5em;
+    border-radius: $roundradius;
+
+    &:hover { 
+        cursor: pointer;
+        color: $Orange;
+        background-color: $White;
+    }
+  
+}
+
+
+
+
+// <style>
+// .attribution { font-size: 11px; text-align: center; }
+// .attribution a { color: hsl(228, 45%, 44%); }
+// </style>
+
+
+#thankyou-container { 
+    @include containers();
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    svg{ 
+
+        display: block;
+        margin: 0 auto 2rem;
+        margin-bottom: -.1em;
+
+    }
+
+    #rating{ 
+        color: $Orange; 
+        border-radius: $roundradius;
+        background-color: $bluebackdrop;
+        padding: .2rem .5rem 0;
+       
+        
+    }
+
+    h1{
+        margin-bottom: -.1em;
+    }
+    
+    #thankyou-para { 
+        color: $LightGrey;
+}
+}
+
+
+
+.hidden { 
+    display: none !important;
+}
