@@ -1,33 +1,78 @@
 @use "variables" as *; 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Overpass:wght@400;700&display=swap');
+
+@media screen (max-width:375px) { 
+    @mixin containers{ 
+    
+max-width: 25%;
+
+
+}}
+
  
 
 /* mixin */ 
 
 @mixin containers{
-    padding: 2em;
-    margin: 25%;
+
+margin: auto;
+padding: 25px;
+max-width: 25%;
     background-color: $DarkBlue;
     color: $White;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     border-radius: $roundradius;
+    font-family: 'overpass';
+   
 
 }
 
+* { 
+    padding: 0;
+}
+
+
 
 body { 
-   margin: auto;
-   padding: auto;
+
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   flex-direction: column;
    background-color: $VeryDarkBlue;
+   min-height: 100vh;
+
+  
    
 }
 
 #main-container { 
  @include containers();
 
+svg{ 
+    background-color: $bluebackdrop;
+    padding: .75rem;
+    border-radius: 50%;
+
+
+}
+
+.para-main{ 
+    color: $MediumGrey;
+    margin-top: -.75em;
+    font-weight: $wieght400;
+    font-size: 15px;
+}
  
 }
+
+
 
 #buttons-container { 
 display: flex;
@@ -37,11 +82,13 @@ padding-bottom: 1em;
     .button { 
         border-radius: 50%;
         padding: .75em 1em;
-        background-color: $MediumGrey;
+        background-color: $bluebackdrop; 
+        color: $LightGrey;
+        font-weight: $wieght400;
     
 
 
-        &:hover { 
+        &:hover, &:focus { 
             background-color: $Orange;
             color: $White;
             cursor: pointer;
@@ -60,6 +107,9 @@ padding-bottom: 1em;
     color: $White;
     padding: .5em;
     border-radius: $roundradius;
+    font-weight: $wieght700;
+    letter-spacing: .1em;
+    font-weight: $wieght400;
 
     &:hover { 
         cursor: pointer;
@@ -89,8 +139,9 @@ padding-bottom: 1em;
 
         display: block;
         margin: 0 auto 2rem;
-        margin-bottom: -.1em;
+       margin-bottom: -.4em;
 
+     
     }
 
     #rating{ 
@@ -108,6 +159,8 @@ padding-bottom: 1em;
     
     #thankyou-para { 
         color: $LightGrey;
+        font-weight: $wieght400;
+        font-size: 15px;
 }
 }
 
@@ -115,4 +168,12 @@ padding-bottom: 1em;
 
 .hidden { 
     display: none !important;
+}
+
+
+// attribution 
+
+.attribution { 
+    background-color: $bluebackdrop;
+    background-color: $MediumGrey;
 }

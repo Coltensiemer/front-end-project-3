@@ -1,19 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Overpass&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Overpass:wght@400;700&display=swap");
 /* mixin */
+* {
+  padding: 0;
+}
+
 body {
-  margin: auto;
-  padding: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
   background-color: hsl(216deg, 12%, 8%);
+  min-height: 100vh;
 }
 
 #main-container {
-  padding: 2em;
-  margin: 25%;
+  margin: auto;
+  padding: 25px;
+  max-width: 25%;
   background-color: hsl(213deg, 19%, 18%);
   color: hsl(0deg, 0%, 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   border-radius: 20px;
+  font-family: "overpass";
+}
+#main-container svg {
+  background-color: hsl(213deg, 20%, 22%);
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+#main-container .para-main {
+  color: hsl(216deg, 12%, 54%);
+  margin-top: -0.75em;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 #buttons-container {
@@ -24,9 +47,11 @@ body {
 #buttons-container .button {
   border-radius: 50%;
   padding: 0.75em 1em;
-  background-color: hsl(216deg, 12%, 54%);
+  background-color: hsl(213deg, 20%, 22%);
+  color: hsl(217deg, 12%, 63%);
+  font-weight: 400;
 }
-#buttons-container .button:hover {
+#buttons-container .button:hover, #buttons-container .button:focus {
   background-color: hsl(25deg, 97%, 53%);
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
@@ -37,6 +62,9 @@ body {
   color: hsl(0deg, 0%, 100%);
   padding: 0.5em;
   border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-weight: 400;
 }
 #submit:hover {
   cursor: pointer;
@@ -45,14 +73,17 @@ body {
 }
 
 #thankyou-container {
-  padding: 2em;
-  margin: 25%;
+  margin: auto;
+  padding: 25px;
+  max-width: 25%;
   background-color: hsl(213deg, 19%, 18%);
   color: hsl(0deg, 0%, 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   border-radius: 20px;
+  font-family: "overpass";
   display: flex;
   justify-content: center;
   text-align: center;
@@ -60,7 +91,7 @@ body {
 #thankyou-container svg {
   display: block;
   margin: 0 auto 2rem;
-  margin-bottom: -0.1em;
+  margin-bottom: -0.4em;
 }
 #thankyou-container #rating {
   color: hsl(25deg, 97%, 53%);
@@ -73,8 +104,15 @@ body {
 }
 #thankyou-container #thankyou-para {
   color: hsl(217deg, 12%, 63%);
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .hidden {
   display: none !important;
+}
+
+.attribution {
+  background-color: hsl(213deg, 20%, 22%);
+  background-color: hsl(216deg, 12%, 54%);
 }/*# sourceMappingURL=index.css.map */
