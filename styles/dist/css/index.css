@@ -9,10 +9,17 @@
 body {
   display: flex;
   justify-content: center;
-  text-align: center;
+  text-align: start;
   flex-direction: column;
   background-color: hsl(216deg, 12%, 8%);
   min-height: 100vh;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -24,8 +31,9 @@ body {
   border-radius: 20px;
   font-family: "overpass";
   flex-wrap: nowrap;
-  padding: 20px;
-  margin: auto 50%;
+  width: 25%;
+  padding: 1em;
+  gap: 0.5em;
 }
 #main-container svg {
   background-color: hsl(213deg, 20%, 22%);
@@ -33,7 +41,8 @@ body {
   border-radius: 50%;
 }
 #main-container h1 {
-  padding: 0.5em;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 #main-container .para-main {
   color: hsl(216deg, 12%, 54%);
@@ -43,27 +52,27 @@ body {
 
 #buttons-container {
   display: flex;
-  justify-content: space-around;
-  padding: 1em;
-  gap: 1em;
+  justify-content: space-evenly;
+  gap: 0.25rem;
 }
-#buttons-container .button {
+#buttons-container label {
+  display: inline-block;
+  border: 2px green solid;
+  border-radius: 50%;
+}
+#buttons-container label .button {
   border-radius: 50%;
   padding: 0.75em 1em;
   background-color: hsl(213deg, 20%, 22%);
   color: hsl(217deg, 12%, 63%);
   font-weight: 400;
 }
-#buttons-container .button:hover, #buttons-container .button:focus {
-  background-color: hsl(25deg, 97%, 53%);
-  color: hsl(0deg, 0%, 100%);
-  cursor: pointer;
-}
 
 #submit {
   background-color: hsl(25deg, 97%, 53%);
   color: hsl(0deg, 0%, 100%);
   padding: 0.5em;
+  margin: 0.5em;
   border-radius: 20px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -83,25 +92,23 @@ body {
   border-radius: 20px;
   font-family: "overpass";
   flex-wrap: nowrap;
-  padding: 20px;
-  margin: auto 50%;
+  width: 25%;
+  padding: 1em;
+  gap: 0.5em;
 }
 #thankyou-container svg {
   display: block;
   margin: 0 auto 2rem;
-  padding: 20px;
 }
 #thankyou-container #rating {
   color: hsl(25deg, 97%, 53%);
   border-radius: 20px;
   background-color: hsl(213deg, 20%, 22%);
-  padding: 0.2rem 1rem 1rem;
 }
 #thankyou-container #thankyou-para {
   color: hsl(217deg, 12%, 63%);
   font-weight: 400;
   font-size: 15px;
-  padding: 1rem;
 }
 
 .hidden {
@@ -109,6 +116,8 @@ body {
 }
 
 .attribution {
+  position: relative;
+  top: 50px;
   background-color: hsl(213deg, 20%, 22%);
   background-color: hsl(216deg, 12%, 54%);
 }/*# sourceMappingURL=index.css.map */
