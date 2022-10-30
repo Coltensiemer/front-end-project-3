@@ -4,13 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&family=Overpass&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit&family=Overpass:wght@400;700&display=swap');
 
-@media screen (max-width:375px) { 
-    @mixin containers{ 
-    
-max-width: 25%;
-
-
-}}
 
  
 
@@ -18,23 +11,23 @@ max-width: 25%;
 
 @mixin containers{
 
-margin: auto;
-padding: 25px;
-max-width: 25%;
+
     background-color: $DarkBlue;
     color: $White;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
     border-radius: $roundradius;
     font-family: 'overpass';
+    flex-wrap: nowrap;
+    padding: 20px;
+    margin: auto 50%;
    
 
 }
 
 * { 
     padding: 0;
+    margin: 0;
 }
 
 
@@ -47,6 +40,7 @@ body {
    flex-direction: column;
    background-color: $VeryDarkBlue;
    min-height: 100vh;
+   align-items: center;
 
   
    
@@ -60,15 +54,22 @@ svg{
     padding: .75rem;
     border-radius: 50%;
 
-
+   
 }
+
+h1 {
+    padding: .5em; 
+} 
+
 
 .para-main{ 
     color: $MediumGrey;
-    margin-top: -.75em;
     font-weight: $wieght400;
     font-size: 15px;
+
 }
+
+
  
 }
 
@@ -77,8 +78,8 @@ svg{
 #buttons-container { 
 display: flex;
 justify-content: space-around; 
-padding-bottom: 1em;
-
+padding: 1em;
+gap: 1em;
     .button { 
         border-radius: 50%;
         padding: .75em 1em;
@@ -131,15 +132,13 @@ padding-bottom: 1em;
 #thankyou-container { 
     @include containers();
 
-    display: flex;
-    justify-content: center;
-    text-align: center;
 
     svg{ 
 
         display: block;
         margin: 0 auto 2rem;
-       margin-bottom: -.4em;
+        padding: 20px;
+    
 
      
     }
@@ -148,19 +147,20 @@ padding-bottom: 1em;
         color: $Orange; 
         border-radius: $roundradius;
         background-color: $bluebackdrop;
-        padding: .2rem .5rem 0;
+        padding: .2rem 1rem 1rem;
        
         
     }
 
     h1{
-        margin-bottom: -.1em;
+    
     }
     
     #thankyou-para { 
         color: $LightGrey;
         font-weight: $wieght400;
         font-size: 15px;
+        padding: 1rem;
 }
 }
 
