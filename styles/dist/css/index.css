@@ -22,19 +22,19 @@ section {
   height: 360px;
 }
 
-#main-container svg {
+#main-container #star {
   position: relative;
   left: 2em;
 }
-#main-container h1 {
+#main-container #h1-header {
   position: relative;
+  top: 0.5em;
   left: 0.9em;
   color: hsl(0deg, 0%, 100%);
 }
 #main-container .para-main {
   position: relative;
   left: 1.5em;
-  bottom: 2em;
   color: hsl(216deg, 12%, 54%);
   font-weight: 400;
   font-size: 15px;
@@ -51,17 +51,42 @@ section {
   justify-content: space-evenly;
 }
 #buttons-container label {
+  position: relative;
+  left: -30px;
   color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 #buttons-container input {
+  position: relative;
+  left: 10px;
+  top: 10px;
+  width: 43px;
+  height: 43px;
   opacity: 0;
+  z-index: 999;
 }
 #buttons-container input + label {
   cursor: pointer;
+  position: relative;
+  color: hsl(0deg, 0%, 100%);
 }
 #buttons-container input + label::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  right: -16px;
+  top: -10px;
   height: 42px;
   width: 42px;
+  background-color: hsl(216deg, 12%, 8%);
+  opacity: 0.5;
+  border-radius: 100%;
+}
+#buttons-container input:hover + label::before {
+  background-color: hsl(25deg, 97%, 53%);
+}
+#buttons-container input:checked + label::before {
   background-color: hsl(217deg, 12%, 63%);
 }
 
@@ -82,15 +107,26 @@ section {
 }
 
 #thankyou-container svg {
-  display: block;
-  margin: 0 auto 2rem;
+  display: inline-block;
+  margin: 0 auto;
 }
 #thankyou-container #rating {
+  position: relative;
+  max-width: 200px;
+  top: 0.5em;
+  left: 5.5em;
   color: hsl(25deg, 97%, 53%);
   border-radius: 20px;
   background-color: hsl(213deg, 20%, 22%);
 }
+#thankyou-container #thankyou-head {
+  color: hsl(0deg, 0%, 100%);
+  position: relative;
+  left: 4em;
+  top: 0.5em;
+}
 #thankyou-container #thankyou-para {
+  text-align: center;
   color: hsl(217deg, 12%, 63%);
   font-weight: 400;
   font-size: 15px;
@@ -101,8 +137,8 @@ section {
 }
 
 .attribution {
-  position: relative;
-  top: 50px;
+  margin: 2em auto;
+  width: 250px;
   background-color: hsl(213deg, 20%, 22%);
   background-color: hsl(216deg, 12%, 54%);
 }/*# sourceMappingURL=index.css.map */
